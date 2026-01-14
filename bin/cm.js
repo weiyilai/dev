@@ -279,7 +279,7 @@ function unreleased() {
   for (let pkg of packages) {
     let ver = version(pkg), changes = changelog(pkg, ver)
     if (changes.fix.length || changes.feature.length || changes.breaking.length)
-      console.log(pkg.name + ":\n\n", releaseNotes(changes, ver).body)
+      console.log(pkg.name + ":\n\n" + releaseNotes(changes, ver).body)
   }
 }
 
